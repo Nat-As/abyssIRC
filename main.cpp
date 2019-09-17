@@ -1,4 +1,3 @@
-#include <iostream>
 #include <string>
 #include <sys/socket.h>
 #include <sys/types.h>
@@ -10,14 +9,8 @@ using namespace std;
 
 int main() {
 
-    /*
-    int connected = 0; // Used to loop the program
 
-    string server = "irc.freenode.net"; // network address
-    int port = 6667; // server port
-    string nick = "NICK Somebot"; // NICK raw
-    string user = "USER Somebot randomtext israndom :My first c++ bot"; // USER raw
-    */
+    int connected = 0; // Used to loop the program
 
     /** Structs that hold the socket information **/
 
