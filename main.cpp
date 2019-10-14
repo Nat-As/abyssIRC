@@ -1,48 +1,26 @@
-#include <string>
-#include <sys/socket.h>
-#include <sys/types.h>
-#include <cstring>
-#include <netdb.h>
-#include "config.h"
+#include <sys/wait.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <cstdio>
 
 using namespace std;
 
-int main() {
+int main(void)
+{
+    pid_t pids[10];
+    int i;
 
-
-    int connected = 0; // Used to loop the program
-
-    /** Structs that hold the socket information **/
-
-    struct sockaddr_in addr;
-    struct hostent *host;
-
-    /** Get an ip address from the network to connect to **/
-    host = gethostbyname(server.c_str());
-
-    /** Fill the members of the socket structs required to connect **/
-
-    addr.sin_addr.s_addr = *(unsigned long*)host->h_addr;
-    addr.sin_family = AF_INET;
-    addr.sin_port = htons((unsigned short)port);
-    int sockd = socket(AF_INET, SOCK_STREAM, 0);
-
-    /** Connect to address **/
-    connect(sockd, (struct sockaddr *)&addr, sizeof(addr));
-
-    cout << "Connecting to: " << server << endl;
-    send(sockd, nick.c_str(), nick.size(), 0); // Converts nick string to c-array and sends it to server
-    cout << "Sent: " << nick << " to server" << endl;
-    send(sockd, user.c_str(), user.size(), 0); // Converts user string to c-array and sends it to server
-    cout << "sent: " << user << " to server" << endl;
-
-    char sockbuff[4096]; // array to hold the incoming socket data
-    while (connected < 1) {
-        memset(&sockbuff, '\0', sizeof(sockbuff)); // make sure sockbuff[] is empty
-        recv(sockd, sockbuff, 4096, 0); // Recieve all the data from server to sockbuff[]
-        cout << sockbuff << endl;;
+    for (i = 9; i >= 0; --i) {
+        pids[i] = fork();
+        if (pids[i] == 0) {
+            std::printf("Waiting\n");
+            sleep(i+10);
+            _exit(0);
+        }
     }
 
+    for (i = 9; i >= 0; --i)
+        waitpid(pids[i], NULL, 0);
 
     return 0;
 }
