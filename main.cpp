@@ -1,7 +1,6 @@
 #include <sys/wait.h>
-#include <stdlib.h>
+#include <cstdlib>
 #include <unistd.h>
-#include <cstdio>
 
 using namespace std;
 
@@ -13,7 +12,7 @@ int main(void)
     for (i = 9; i >= 0; --i) {
         pids[i] = fork();
         if (pids[i] == 0) {
-            std::printf("Waiting\n");
+            system("echo Hello world");
             sleep(i+10);
             _exit(0);
         }
