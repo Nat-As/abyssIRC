@@ -3,4 +3,4 @@ project(anubyss)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(anubyss main.cpp)
+add_executable(anubyss main.cpp anubis.h)
