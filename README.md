@@ -8,4 +8,5 @@ This IRC Daemon is made to run on several machines that are connected to the int
 
 ### References
 Server loop: https://ncona.com/2019/04/building-a-simple-server-with-cpp/
+<BR>
 Zombie loop: https://en.wikipedia.org/wiki/Zombie_process
