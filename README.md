@@ -10,3 +10,5 @@ This IRC Daemon is made to run on several machines that are connected to the int
 Server loop: https://ncona.com/2019/04/building-a-simple-server-with-cpp/
 <BR>
 Zombie loop: https://en.wikipedia.org/wiki/Zombie_process
+<BR>
+<img src="https://github.com/Nat-As/anubyssIRC/tree/master/img/scrn.png" alt="screenshot"/>
