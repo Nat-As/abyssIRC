@@ -1,0 +1,3 @@
+/home/saltystik/Documents/School/Programming1/anubyssIRC/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/saltystik/Documents/School/Programming1/anubyssIRC/cmake-build-debug/CMakeFiles/anubyss.dir
+/home/saltystik/Documents/School/Programming1/anubyssIRC/cmake-build-debug/CMakeFiles/edit_cache.dir

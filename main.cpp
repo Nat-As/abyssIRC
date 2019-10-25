@@ -64,7 +64,7 @@ int main(void)
     for (i = 9; i >= 0; --i) {
         pids[i] = fork();
         if (pids[i] == 0) {
-            system("echo Hello world");
+            sloop();
             sleep(i+10);
             _exit(0);
         }
