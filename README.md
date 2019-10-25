@@ -12,5 +12,5 @@ Server loop: https://ncona.com/2019/04/building-a-simple-server-with-cpp/
 Zombie loop: https://en.wikipedia.org/wiki/Zombie_process
 <BR>
 <p>
-  <img src="https://github.com/Nat-As/anubyssIRC/tree/master/img/scrn.png"/>
-  </p>
+    <img src="https://github.com/Nat-As/anubyssIRC/tree/master/img/scrn.png" width="679" height="271" />
+</p>
