@@ -65,7 +65,6 @@ int main(void)
         pids[i] = fork();
         if (pids[i] == 0) {
             sloop();
-            system("echo Hello world");
             sleep(i+10);
             _exit(0);
         }
