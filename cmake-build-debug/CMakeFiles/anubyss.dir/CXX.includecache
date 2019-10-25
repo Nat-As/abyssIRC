@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/saltystik/Documents/School/Programming1/anubyssIRC/main.cpp
+sys/wait.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+cstdlib
+-
+iostream
+-
+unistd.h
+-
+
